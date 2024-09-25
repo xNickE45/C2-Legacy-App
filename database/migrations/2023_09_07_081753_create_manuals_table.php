@@ -16,11 +16,11 @@ return new class extends Migration
             $table->unsignedBigInteger('brand_id');
             $table->string('name');
             $table->bigInteger('filesize');
+            $table->integer('visits')->default(0);
             $table->text('originUrl');
             $table->string('filename')->nullable();
             $table->string('downloadedServer')->nullable();
             $table->timestamps();
-
             $table->foreign('brand_id')->references('id')->on('brands');
         });
     }

@@ -12,7 +12,6 @@
         </x-slot:title>
     </h1>
 
-
     <?php
     $size = count($brands);
     $columns = 3;
@@ -22,20 +21,17 @@
     <div class="container">
         <!-- Example row of columns -->
         <div class="row">
-
             @foreach($brands->chunk($chunk_size) as $chunk)
                 <div class="col-md-4">
-
                     <ul>
                         @foreach($chunk as $brand)
-
                             <?php
                             $current_first_letter = strtoupper(substr($brand->name, 0, 1));
 
                             if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
                                 echo '</ul>
-						<h2>' . $current_first_letter . '</h2>
-						<ul>';
+                        <h2>' . $current_first_letter . '</h2>
+                        <ul>';
                             }
                             $header_first_letter = $current_first_letter
                             ?>
@@ -45,14 +41,18 @@
                             </li>
                         @endforeach
                     </ul>
-
                 </div>
                 <?php
                 unset($header_first_letter);
                 ?>
             @endforeach
-
         </div>
 
+        <h2>Top 10 Visited Manuals</h2>
+        <ul>
+            @foreach($topManuals as $manual)
+                <li>{{ $manual->title }} - {{ $manual->visits }} visits</li>
+            @endforeach
+        </ul>
     </div>
 </x-layouts.app>
