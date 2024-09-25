@@ -27,9 +27,6 @@ class ManualController extends Controller
         $topManuals = Manual::orderBy('visits', 'desc')->take(10)->get();
         $brands = Brand::all()->sortBy('name'); // Fetch all brands and sort by name
 
-        // Debugging: Check if brands are fetched
-        dd($brands);
-
         return view('pages/homepage', [
             "topManuals" => $topManuals,
             "brands" => $brands,
