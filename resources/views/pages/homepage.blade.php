@@ -66,25 +66,16 @@
         <div class="row">
             @foreach($brands->chunk($chunk_size) as $chunk)
                 <div class="col-md-4">
-<<<<<<< Updated upstream
-                    <ul>
-=======
 
                     {{-- <ul class="brand-list"> --}}
->>>>>>> Stashed changes
                         @foreach($chunk as $brand)
                             <?php
                             $current_first_letter = strtoupper(substr($brand->name, 0, 1));
 
                             if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
                                 echo '</ul>
-<<<<<<< Updated upstream
-                        <h2>' . $current_first_letter . '</h2>
-                        <ul>';
-=======
                         <h2 class="header-text">' . $current_first_letter . '</h2>
                         <ul class="brand-list">';
->>>>>>> Stashed changes
                             }
                             $header_first_letter = $current_first_letter
                             ?>
