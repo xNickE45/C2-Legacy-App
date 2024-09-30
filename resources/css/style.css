@@ -1,0 +1,16 @@
+.header-text {
+    font-size: 2em;
+    font-weight: bold;
+}
+.brand-list {
+    background-color: #f0f8ff; /* Pas deze kleur aan om te matchen met de rest van de pagina */
+    padding: 10px;
+    border-radius: 5px;
+}
+.brand-list a {
+    color: #ff4500; /* Pas deze kleur aan om goed zichtbaar te zijn */
+    text-decoration: none;
+}
+.brand-list a:hover {
+    text-decoration: underline;
+}
