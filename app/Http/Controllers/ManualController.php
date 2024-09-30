@@ -21,6 +21,7 @@ class ManualController extends Controller
             "brand" => $brand,
         ]);
     }
+
     public function home()
     {
         // Fetch the top 10 visited manuals
@@ -31,5 +32,16 @@ class ManualController extends Controller
             "topManuals" => $topManuals,
             "brands" => $brands,
         ]);
+    }
+
+    public function incrementAndRedirect($manual_id)
+    {
+        $manual = Manual::findOrFail($manual_id);
+
+        // Increment the visits column
+        $manual->increment('visits');
+
+        // Redirect to the actual manual URL
+        return redirect('http://manualsonline.com/manuals/mfg/Aastra_Telecom/M5316.html'); // Replace with actual URL logic
     }
 }

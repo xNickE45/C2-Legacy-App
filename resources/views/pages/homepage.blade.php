@@ -47,11 +47,10 @@
                 ?>
             @endforeach
         </div>
-
-        <h2>Top 10 Visited Manuals</h2>
+    <h2>Top 10 Visited Manuals</h2>
         <ul>
             @foreach($topManuals as $manual)
-                <li>{{ $manual->title }} - {{ $manual->visits }} visits</li>
+                <li>{{ $manual->name }} - {{ $manual->visits }} visits</li>
             @endforeach
         </ul>
     </div>
