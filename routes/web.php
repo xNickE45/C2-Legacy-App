@@ -34,6 +34,8 @@ use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\BrandController;
 use App\Models\Brand;
 
+
+
 // Homepage
 Route::get('/', [ManualController::class, 'home'])->name('home');
 
