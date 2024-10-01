@@ -8,13 +8,6 @@
         <li><a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/" alt="Manuals for '{{$brand->name}}'" title="Manuals for '{{$brand->name}}'">{{ $brand->name }}</a></li>
     </x-slot:breadcrumb>
 
-    @if ($manual->locally_available)
-        <iframe src="{{ $manual->url }}" width="780" height="600" frameborder="0" marginheight="0" marginwidth="0">
-        Iframes are not supported<br />
-        <a href="{{ $manual->url }}" target="new" alt="Download your manual here" title="Download your manual here">Click here to download the manual</a>
-        </iframe>
-    @else
-        <a href="{{ $manual->url }}" target="new" alt="Download your manual here" title="Download your manual here">Click here to download the manual</a>
-    @endif
 
+    <a href="{{ $manual->url }}" target="new" alt="Download your manual here" title="Download your manual here" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: #fff; background-color: #007bff; border: none; border-radius: 5px; text-align: center; text-decoration: none; cursor: pointer; transition: background-color 0.3s ease;">Click here to download the manual</a>
 </x-layouts.app>
