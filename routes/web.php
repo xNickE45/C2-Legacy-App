@@ -56,3 +56,5 @@ Route::get('/generateSitemap/', [SitemapController::class, 'generate']);
 Route::get('/{brand_id}/{brand_slug}/{manual_id}', [ManualController::class, 'show']);
 
 Route::get('/manuals/increment/{manual_id}', [ManualController::class, 'incrementVisits'])->name('manual.increment');
+
+

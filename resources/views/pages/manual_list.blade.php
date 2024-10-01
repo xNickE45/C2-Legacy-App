@@ -17,11 +17,14 @@
         @foreach ($manuals as $manual)
 
             @if ($manual->locally_available)
-                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
+                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->visits }} {{ $manual->name }}</a>
                 ({{$manual->filesize_human_readable}})
             @else
-                <a href="/{{ $brand->id }}/{{ $brand->name }}/{{ $manual->id }}" target="new" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
+                {{-- the link to the manual --}}
+                <a href="/{{ $brand->id }}/{{ $brand->name }}/{{ $manual->id }}" target="new" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a> | Visits: {{ $manual->visits }}.
             @endif
+
+
 
             <br />
         @endforeach

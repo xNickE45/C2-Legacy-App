@@ -20,6 +20,8 @@ class ManualController extends Controller
             "manual" => $manual,
             "brand" => $brand,
         ]);
+
+
     }
 
     public function home()
@@ -33,7 +35,6 @@ class ManualController extends Controller
             "brands" => $brands,
         ]);
     }
-
     public function incrementAndRedirect($manual_id)
     {
         $manual = Manual::findOrFail($manual_id);
