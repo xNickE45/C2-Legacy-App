@@ -62,6 +62,11 @@
     </style>
 
     <div class="container">
+        <h1>Welkom, {{$name}}</h1>
+        <div class="alphabet-links">
+            @foreach(range('A', 'Z') as $letter)
+                <a href="/brands/{{ $letter }}">{{ $letter }}</a>
+            @endforeach
         <!-- Example row of columns -->
         <div class="row">
             @foreach($brands->chunk($chunk_size) as $chunk)

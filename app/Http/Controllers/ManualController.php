@@ -32,11 +32,13 @@ class ManualController extends Controller
         $topManuals = Manual::orderBy('visits', 'desc')->take(10)->get();
         $brands = Brand::all()->sortBy('name'); // Fetch all brands and sort by name
         $categories = Catagory::all();
+        $name = 'John';
 
         return view('pages/homepage', [
             "topManuals" => $topManuals,
             "brands" => $brands,
-            "categories" => $categories
+            "categories" => $categories,
+            "name" => $name
         ]);
     }
     public function incrementAndRedirect($manual_id)
