@@ -98,4 +98,10 @@
             @endforeach
         </ul>
     </div>
+
+    <h2>Catagories:</h2>
+    <ul>
+        @foreach($categories as $category)
+            <li>{{ $category->catagory }}</li>
+        @endforeach
 </x-layouts.app>
