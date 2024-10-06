@@ -62,11 +62,6 @@
     </style>
 
     <div class="container">
-        <h1>Welkom, {{$name}}</h1>
-        <div class="alphabet-links">
-            @foreach(range('A', 'Z') as $letter)
-                <a href="/brands/{{ $letter }}">{{ $letter }}</a>
-            @endforeach
         <!-- Example row of columns -->
         <div class="row">
             @foreach($brands->chunk($chunk_size) as $chunk)
@@ -103,10 +98,4 @@
             @endforeach
         </ul>
     </div>
-
-    <h2>Catagories:</h2>
-    <ul>
-        @foreach($categories as $category)
-            <li>{{ $category->catagory }}</li>
-        @endforeach
 </x-layouts.app>

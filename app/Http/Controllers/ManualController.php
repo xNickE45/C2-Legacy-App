@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Brand;
-use App\Models\Catagory;
 use App\Models\Manual;
 
 class ManualController extends Controller
@@ -20,7 +19,6 @@ class ManualController extends Controller
         return view('pages/manual_view', [
             "manual" => $manual,
             "brand" => $brand,
-
         ]);
 
 
@@ -31,14 +29,10 @@ class ManualController extends Controller
         // Fetch the top 10 visited manuals
         $topManuals = Manual::orderBy('visits', 'desc')->take(10)->get();
         $brands = Brand::all()->sortBy('name'); // Fetch all brands and sort by name
-        $categories = Catagory::all();
-        $name = 'John';
 
         return view('pages/homepage', [
             "topManuals" => $topManuals,
             "brands" => $brands,
-            "categories" => $categories,
-            "name" => $name
         ]);
     }
     public function incrementAndRedirect($manual_id)

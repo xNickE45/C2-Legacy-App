@@ -38,7 +38,6 @@ use App\Models\Brand;
 
 // Homepage
 Route::get('/', [ManualController::class, 'home'])->name('home');
-Route::get('/brands/{letter}', [BrandController::class, 'showBrandsByLetter']);
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
 Route::get('/manual/{language}/{brand_slug}/brand.html', [RedirectController::class, 'brand']);

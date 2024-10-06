@@ -1,6 +1,16 @@
 
 <footer>
 	© {{ __('misc.copyright') }}
+  <h1>contant:</h1>
+  <p>email:lorem ipsum</br>tel:0653682395</br>adres:lorem ipsum</p>
+  <h2>Over ons</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta</br> cupiditate nulla</p>
+  <h3>Volg ons op:</h3>
+  <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook"></a>
+  <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram"></a>
+  <a href="https://www.twitter.com/"><img src="images/twitter.png" alt="twitter"></a>
+  <a href="https://www.linkedin.com/"><img src="images/linkedin.png" alt="linkedin"></a>
+  <a href="https://www.youtube.com/"><img src="images/youtube.png" alt="youtube"></a>
 </footer>
 
 
