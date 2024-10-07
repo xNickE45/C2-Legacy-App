@@ -51,8 +51,9 @@
         padding: 10px;
         background-color: #f1f1f1;
         position: fixed;
-        width: 100%;
+        /* width: 100%; */
         bottom: 0;
+        right: 0;
     }
 
     footer{
@@ -62,6 +63,11 @@
     </style>
 
     <div class="container">
+        <h1>Welkom, {{$name}}</h1>
+        <div class="alphabet-links">
+            @foreach(range('A', 'Z') as $letter)
+                <a href="/brands/{{ $letter }}">{{ $letter }}</a>
+            @endforeach
         <!-- Example row of columns -->
         <div class="row">
             @foreach($brands->chunk($chunk_size) as $chunk)
@@ -91,6 +97,11 @@
                 ?>
             @endforeach
         </div>
+        <h2>Catagories:</h2>
+    <ul>
+        @foreach($catagories as $category)
+            <li>{{ $category->catagory }}</li>
+        @endforeach
     <h2>Top 10 Visited Manuals</h2>
         <ul>
             @foreach($topManuals as $manual)
