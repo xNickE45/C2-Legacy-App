@@ -2,7 +2,7 @@
 <footer>
 	© {{ __('misc.copyright') }}
   <h1>contant:</h1>
-  <p>email:lorem ipsum</br>tel:0653682395</br>adres:lorem ipsum</p>
+  <p>email:lorem ipsum</br>tel:0653682395</br>adres:lorem ipsum </br>Btw:lorem ipsum</br>Kvk:lorem ipsum </p>
   <h2>Over ons</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta</br> cupiditate nulla</p>
   <h3>Volg ons op:</h3>
