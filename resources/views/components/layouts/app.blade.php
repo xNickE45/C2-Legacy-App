@@ -16,6 +16,7 @@
             <ul class="breadcrumb">
                 <li><a href="/" title="{{ __('misc.home_alt') }}"
                     alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a></li>
+                <li>    <a class="navbar-brand" href="/C2-Legacy-App\resources\views\pages\contact.blade.php">contact</a></li>
                 {{ $breadcrumb ?? '' }}
             </ul>
 
