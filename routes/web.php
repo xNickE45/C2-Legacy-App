@@ -38,6 +38,10 @@ use App\Models\Brand;
 
 // Homepage
 Route::get('/', [ManualController::class, 'home'])->name('home');
+// Contact page route
+Route::get('/contact', function () {
+    return view('pages.contact');
+});
 Route::get('/brands/{letter}', [BrandController::class, 'showBrandsByLetter']);
 Route::get('/catagories/{catagory}', [BrandController::class, 'showCatagory']);
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);

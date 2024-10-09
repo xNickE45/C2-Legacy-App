@@ -6,10 +6,21 @@
     <title>Contact</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
+
+
+
+<x-navbar>
+</x-navbar>
+<ul class="breadcrumb">
+    <li><a href="/" title="{{ __('misc.home_alt') }}"
+        alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a></li>
+    <li>    <a  href="/contact">contact</a></li>
+    {{ $breadcrumb ?? '' }}
+</ul>    
 <body>
     <div class="container">
         <h1>Contact Us</h1>
-        <form action="{{ route('contact.submit') }}" method="POST">
+        <form action="" method="POST">
           
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -26,5 +37,6 @@
             <button type="submit" class="btn btn-primary">Send</button>
         </form>
     </div>
+    
 </body>
 </html>
