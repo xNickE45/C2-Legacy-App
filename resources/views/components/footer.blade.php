@@ -7,7 +7,6 @@
         background-color: #2a5c7b;
         color: #fff;
         width: 100%;
-        bottom: 0;
     }
 
     footer >*{
