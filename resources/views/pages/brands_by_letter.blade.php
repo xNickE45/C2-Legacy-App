@@ -5,7 +5,66 @@
         <p>{{ __('introduction_texts.homepage_line_2') }}</p>
         <p>{{ __('introduction_texts.homepage_line_3') }}</p>
     </x-slot:introduction_text>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0 auto;
+            padding: 0;
+        }
 
+        .header-text {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            color: #2a5c7b;
+        }
+
+        .brand-list {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .brand-list a {
+            text-decoration: none;
+            color: #2a5c7b;
+            font-weight: bold;
+        }
+
+        .brand-list a:hover {
+            color: #1a3c5b;
+        }
+
+        .container {
+            margin: 0 auto;
+                ;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2a5c7b;
+            color: #fff;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .row{
+            margin: 0 auto;
+
+        }
+
+        .col-md-8{
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    </style>
     <h1>
         <x-slot:title >
             {{ __('misc.brands_starting_with') }} {{ $letter }}
@@ -18,48 +77,6 @@
     $chunk_size = ceil($size / $columns);
     ?>
 
-    <style>
-        .header-text {
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-
-        .brand-list {
-            background-color: rgb(249, 245, 245); /* Pas deze kleur aan om te matchen met de rest van de pagina */
-            border: 1px solid;
-            box-shadow: 5px 5px 5px #e4dede;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .brand-list a {
-            text-decoration: none;
-        }
-
-        .brand-list a:hover {
-            color: rgb(42, 92, 123); /* Pas deze kleur aan om te matchen met de rest van de pagina */
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        footer {
-            text-align: start;
-            padding: 10px;
-            background-color: #f1f1f1;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        footer {
-            max-width: 100%;
-            margin: 0 auto;
-        }
-    </style>
 
     <div class="container">
         <h1>Brands starting with {{ $letter }}</h1>
