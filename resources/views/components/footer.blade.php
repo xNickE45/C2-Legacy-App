@@ -3,16 +3,16 @@
 
   <h1>contact:</h1>
   <a  href="/contact">contact</a>
-  <p>email: lorem ipsum</br>tel: 0653682395</br>adres: lorem ipsum </br>Btw: lorem ipsum</br>Kvk: lorem ipsum </p>
+  <p>email: 4Szakelijkeemail@gmail.com</br>tel: 0653682395</br>adres: terheideseweg 350 </br>Btw: 123456789</br>Kvk: 4S </p>
   <h2>Over ons</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta</br> cupiditate nulla</p>
+  <p>Bij 4S ontwikkelen we innovatieve software-oplossingen voor de sportwereld. Wat begon in 2008 als een klein project van onze oprichter Jos Adder, is uitgegroeid tot een toonaangevend bedrijf met meer dan 50 medewerkers. Wij zijn gespecialiseerd in het creëren van gebruiksvriendelijke sportapplicaties, van toernooibeheersystemen tot clubwebsites. Onze passie voor sport en technologie drijft ons om elke dag te streven naar het beste voor onze klanten. Met een flexibele, samenwerkende cultuur en een sterke focus op kwaliteit blijven we sportorganisaties wereldwijd ondersteunen.</p>
   <h3>Volg ons op:</h3>
   <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook"></a>
   <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram"></a>
   <a href="https://www.twitter.com/"><img src="images/twitter.png" alt="twitter"></a>
   <a href="https://www.linkedin.com/"><img src="images/linkedin.png" alt="linkedin"></a>
   <a href="https://www.youtube.com/"><img src="images/youtube.png" alt="youtube"></a>
-  <p>© {{ __('misc.copyright') }} {{ date('Y') }} {{ __('misc.all_rights_reserved') }}</p>
+  <p>© {{ __('misc.copyright') }} {{ date('Y') }}</p>
 </footer>
 
 
