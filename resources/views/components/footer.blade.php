@@ -2,7 +2,7 @@
 <footer>
 	© {{ __('misc.copyright') }}
   <h1>contant:</h1>
-  <a class="navbar-brand" href="/C2-Legacy-App\resources\views\pages\contact.blade.php">contact</a>
+  <a  href="/contact">contact</a>
   <p>email:lorem ipsum</br>tel:0653682395</br>adres:lorem ipsum </br>Btw:lorem ipsum</br>Kvk:lorem ipsum </p>
   <h2>Over ons</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta</br> cupiditate nulla</p>

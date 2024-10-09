@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Contact Us</h1>
-        <form action="{{ route('contact.submit') }}" method="POST">
+        <form action="" method="POST">
           
             <div class="form-group">
                 <label for="name">Name:</label>
