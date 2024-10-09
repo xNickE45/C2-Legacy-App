@@ -93,9 +93,18 @@
             @endforeach
             <h2>Top 10 Visited Manuals</h2>
             <ul>
-                @foreach ($topManuals as $manual)
-                    <li>{{ $manual->name }} - {{ $manual->visits }} visits</li>
-                @endforeach
+                @foreach ($brands as $brand)
+                    @foreach ($topManuals as $manual)
+                        @if ($manual->brand_id == $brand->id)
+                            <li>
+                                <a href="/{{ $brand->id }}/{{ $brand->name }}/{{ $manual->id }}" target="_blank" alt="{{ $manual->name }}" title="{{ $manual->name }}">
+                                    {{ $manual->name }}
+                                </a> - {{ $manual->visits }} visits
+                            </li>
+                        @endif
+                    @endforeach
+                </ul>
+            @endforeach
             </ul>
             <!-- Example row of columns -->
             <div class="row">
