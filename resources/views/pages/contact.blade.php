@@ -6,6 +6,11 @@
     <title>Contact</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
+
+
+
+<x-navbar>
+</x-navbar>    
 <body>
     <div class="container">
         <h1>Contact Us</h1>
@@ -26,5 +31,6 @@
             <button type="submit" class="btn btn-primary">Send</button>
         </form>
     </div>
+    
 </body>
 </html>
