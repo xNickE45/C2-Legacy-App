@@ -19,7 +19,7 @@ return new class extends Migration
 
         Schema::table('brands', function (Blueprint $table) {
             $table->string('category')->default('technology');
-            $table->unsignedBigInteger('catagory_id')->nullable()->default(1);
+            $table->unsignedBigInteger('catagory_id')->nullable();
 
             // Define the foreign key constraint
             $table->foreign('catagory_id')->references('id')->on('catagories')->onDelete('set null');

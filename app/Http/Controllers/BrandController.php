@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Brand;
 use App\Models\Manual;
+use App\Models\Catagory;
 
 class BrandController extends Controller
 {
@@ -24,5 +25,12 @@ class BrandController extends Controller
     {
         $brands = Brand::where('name', 'LIKE', $letter . '%')->get();
         return view('pages.brands_by_letter', ['brands' => $brands, 'letter' => $letter]);
+    }
+
+    public function showCatagory($id)
+    {
+        $category = Catagory::with('brands')->findOrFail($id);
+        // Pass the data to the view
+        return view('pages.brands_by_catagory', compact('category'));
     }
 }

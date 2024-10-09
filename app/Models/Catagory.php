@@ -9,10 +9,8 @@ class Catagory extends Model
 {
     use HasFactory;
 
-    // Specify the table name if it doesn't follow Laravel's naming convention
     protected $table = 'catagories';
 
-    // Specify which attributes can be mass-assigned
     protected $fillable = ['catagory'];
 
     /**
